@@ -1,0 +1,14 @@
+Section 4 Practice Problems
+1. Add const to the methods of your Fraction class that are appropriate
+
+
+
+2. Create constant static variables in the Fraction class for: a half, a third, a fourth and a fifth that we can be used outside of the class
+
+
+
+3. Does the Fraction class require a copy constructor? Why or why not?
+yes, under a Fraction class obj a, we will need to call another Fraction class obj b; therefore, this is a copy constructo (complier does this for us)
+
+
+4. Implement two new methods on the fraction class called GetNumerator and GetDenominator. Make these methods inline.
