@@ -1,0 +1,22 @@
+1. Create and implement a class called Time. Have a method on the class called Init that takes in the hour, minute and second in 24 hour time.
+
+
+
+This class should be able to:
+
+
+
+- Display the time in 12 hour format
+
+- eg. 12:10:01 am - 12 hours, 10 minutes and 1 second in the morning
+
+
+
+- Display the time in 24 hour format
+
+- eg. 22:10:05 - this is 10:10:05 pm in 12 hour time
+
+
+
+You should not have to change the internal data representation of the class to display in either format
+

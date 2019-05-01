@@ -1,0 +1,22 @@
+Section 3 Practice Problems
+Create and implement a class called Fraction which will represent a fractional number eg. 1/2
+
+
+
+This class should be able to:
+
+
+
+- Add, Subtract, Multiply, and Divide Fractional numbers together and return the result (no changes to the internal data should not change to the class for any of these methods). The return value for each should be the most simplified version of the fraction (eg. 1/2 not 128/256)
+
+
+
+- Have 2 different constructors - a default that takes no arguments and one that takes two. The default constructor should call the constructor that takes 2 arguments. The default should be 0/1
+
+
+
+- Have a method that compares two fractions to see if they are equal, less than or greater than each other.
+
+
+
+- Have a display method that will print the fraction in a formatted manner: "1/2"
