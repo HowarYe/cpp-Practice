@@ -1,0 +1,2 @@
+Section 6 Practice Probelms
+Convert the fraction class to use operators instead of the named methods.
