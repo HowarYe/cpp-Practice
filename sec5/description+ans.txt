@@ -1,0 +1,9 @@
+Section 5 Practice probelms
+Replace the display method on the Fraction class with the insertion operator
+
+replace method "void displace()" with the following code:
+
+friend ostream& operator<<(std::ostream &consoleOut, const Fraction &f){
+	consoleOut << "fraction is: " << f.numerator << "/" << f.denominator << endl;
+	return consoleOut;
+}
