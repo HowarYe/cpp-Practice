@@ -1,0 +1,50 @@
+Section 7 Practice Problems
+Implement a class called String, this will represent an array of characters like "Hello"
+
+
+
+This class should be able to:
+
+
+
+- Have a constructor that takes in a string literal (ie. String("Hello"))
+
+- Have a default constructor that is the empty string
+
+- concatenate two Strings together and returns a new String object
+
+- Check if two String objects are equal
+
+- find a substring and return the index of the first character of that substring
+
+- return a String that is substring from a starting position and a length
+
+
+
+- Be displayed with cout (from <iostream>) - eg:
+
+
+
+String myString = "Hello";
+
+cout << myString << endl;
+
+
+
+- return the length of the String object
+
+- return the character at an index
+
+- copy String types from one  to  another either through functions or assignment
+
+- Set the String and string literals to a new string using operator equals
+
+- Append a character to the string using operator+ (this should change the length of the String object)
+
+- Append a String object to the current String object using operator+ (this should change the length of the String object)
+
+- return a const char* version of the string
+
+
+
+Does this class require a destructor? If so, implement it.
