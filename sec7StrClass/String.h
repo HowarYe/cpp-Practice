@@ -13,8 +13,8 @@ using namespace std;
 
 class String{
 public:
-	String():str_arra(""), leng(0){};
-	String(const char &c);
+	String();
+	String(const char c[]);
 	~String();
 
 	// Check if two String objects are equal
@@ -24,7 +24,7 @@ public:
 	int findSub(const String &s);
 
 	// concatenate two Strings together and returns a new String object
-	String concatenate(const String &s);
+	String concatenate(String &s);
 
 	// return a String that is substring from a starting position and a length
 	String sub(size_t start, size_t length);

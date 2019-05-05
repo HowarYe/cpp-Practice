@@ -1,0 +1,18 @@
+#include "String.h"
+
+int main() {
+	String t0;
+	cout << "test #0: cout & default constructor\n" << t0 << endl;
+	String t1("Hello");
+	cout << "test #1: Constructor with string literal \n" << t1 << endl;
+	String t2("World!");
+	cout << "Test #2: concatenate two Strings together\n" << t1.concatenate(t2) <<endl;
+	String t3("Hello");
+	if(t1.equal(t3))
+		cout << "Test #3: check for equal\n";
+	String t4("orl");
+	cout << "Test #4: find substring and return index\n" << t2.findSub(t4);
+
+
+	return 0;
+}

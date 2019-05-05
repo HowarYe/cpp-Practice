@@ -12,18 +12,23 @@ String::~String(){
 	str_arra = nullptr;
 }
 
+String::String(){
+	char c = '\0';
+	str_arra = &c;
+	leng = 0;
+}
+
 // constructor that takes in a string literal (ie. String("Hello"))
-String::String(const char &c){
+String::String(const char c[]){
 	size_t ind = 0;
 	str_arra = new char;
-	if(*c == '\0'){
-		*str_arra = *c;
+	if(c[0] == '\0'){
+		*str_arra = '\0';
 		leng = 0;
-		break;
 	}
 
-	while(*c != '\0'){
-		str_arra[ind] = *c;
+	while(c[ind] != '\0'){
+		str_arra[ind] = c[ind];
 		ind++;
 	}
 	str_arra[ind + 1] = '\0';
@@ -32,11 +37,11 @@ String::String(const char &c){
 
 // Check if two String objects are equal
 bool String::equal(const String &s){
-	if (leng != s.leng)
+	if (this->leng != s.leng)
 		return false;
 	else{
 		for(size_t i = 0; i < leng - 1; i++){
-			if(str_arra[i] != s.str_arra[i])
+			if(this->str_arra[i] != s.str_arra[i])
 				return false;
 		}
 		return true;
@@ -51,12 +56,11 @@ String String::sub(size_t start, size_t length){
 		return s;
 	}
 	else{
-		char* temp = new char;
+		char temp[length];
 		for(size_t i = 0; i < length; i++)
 			temp[i] = str_arra[i + start];
 		temp[length] = '\0';
 		String newS(temp);
-		delete [] temp;
 		return newS;
 	}
 }
@@ -71,15 +75,14 @@ int String::findSub(const String &s){
 			String mystr = this->sub(i, s.leng);
 			if(mystr.equal(s))
 				return i;
-			delete [] mystr;
 		}
 		return -1;
 	}
 }
 
 // concatenate two Strings together and returns a new String object
-String String::concatenate(const String &s){
-	String newS = this->str_arra + s.str_arra;
+String String::concatenate(String &s){
+	String newS = *this + s;
 	return newS;
 }
 
@@ -102,6 +105,7 @@ String& String::operator=(const String &s){
 		str_arra[i] = s.str_arra[i];
 		leng = i + 1;
 	}
+	return *this;
 }
 
 // Append a character to the string
@@ -113,10 +117,10 @@ String& String::operator+(char c){
 
 // Append a String object to the current String
 String& String::operator+(String &s){
-	if(s.str_arra == '\0')
+	if(s.leng == 0)
 		return *this;
 	else if(this->leng == 0)
-		return *s;
+		return s;
 	else{
 		size_t count = 0;
 		for(size_t i = leng; i < leng + s.leng; i++){
